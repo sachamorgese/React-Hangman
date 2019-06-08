@@ -1,35 +1,74 @@
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('fonts/EncodeSansSemiExpanded.ttf')
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-//.App {
-//  text-align: center;
-//}
-//
-//.App-logo {
-//  animation: App-logo-spin infinite 20s linear;
-//  height: 40vmin;
-//  pointer-events: none;
-//}
-//
-//.App-header {
-//  background-color: #282c34;
-//  min-height: 100vh;
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-//  justify-content: center;
-//  font-size: calc(10px + 2vmin);
-//  color: white;
-//}
-//
-//.App-link {
-//  color: #61dafb;
-//}
-//
-//@keyframes App-logo-spin {
-//  from {
-//    transform: rotate(0deg);
-//  }
-//  to {
-//    transform: rotate(360deg);
-//  }
-//}
+.App {
+  font-family: 'EncodeSans', monospace;
+  height: 100vh;
+  padding-top: 5vh;
+  outline: none;
+  text-align: center;
+}
+
+.Main {
+  background-color: yellow;
+  border-radius: 25px;
+  height: 30vw;
+  margin: 5vh auto 0;
+  position: relative;
+  width: 50%;
+
+  &__title {
+    display: block;
+    font-size: 50px;
+    margin: 0 10px 2vw 0;
+    text-align: right;
+  }
+
+  &__text {
+    display: block;
+    font-size: 30px;
+    margin-top: 3vh;
+  }
+
+  &__input {
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    height: 30px;
+    margin: 2vw auto;
+    width: 70%;
+  }
+
+  &__button {
+    background-color: green;
+    border: 0;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 2vw;
+    width: 200px;
+  }
+
+  &__error {
+    color: red;
+    display: block;
+  }
+
+  &__lives, &__time {
+    display: block;
+    font-size: 30px;
+    margin: 1vh 0 3vh 20px;
+    text-align: left;
+  }
+
+  &__letters {
+    font-size: 70px;
+  }
+}
