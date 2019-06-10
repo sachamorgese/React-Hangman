@@ -10,6 +10,7 @@
 }
 
 .App {
+  background-color: #581845;
   font-family: 'EncodeSans', monospace;
   height: 100vh;
   padding-top: 5vh;
@@ -18,41 +19,42 @@
 }
 
 .Main {
-  background-color: yellow;
+  background-color: #900C3F;
   border-radius: 25px;
-  height: 30vw;
-  margin: 5vh auto 0;
-  position: relative;
-  width: 50%;
+  color: #ff5733;
+  height: 500px;
+  margin: 50px auto 0;
+  width: 980px;
 
   &__title {
     display: block;
     font-size: 50px;
-    margin: 0 10px 2vw 0;
+    margin: 0 10px 20px 0;
     text-align: right;
   }
 
   &__text {
     display: block;
-    font-size: 30px;
-    margin-top: 3vh;
+    font-size: 40px;
+    margin-top: 30px;
   }
 
   &__input {
     border: 0;
     border-radius: 5px;
     display: block;
-    height: 30px;
-    margin: 2vw auto;
+    height: 40px;
+    margin: 20px auto;
     width: 70%;
   }
 
   &__button {
-    background-color: green;
+    background-color: #FFC300;
     border: 0;
     border-radius: 5px;
+    cursor: pointer;
     height: 50px;
-    margin-top: 2vw;
+    margin-top: 20px;
     width: 200px;
   }
 
@@ -64,7 +66,7 @@
   &__lives, &__time {
     display: block;
     font-size: 30px;
-    margin: 1vh 0 3vh 20px;
+    margin: 10px 0 30px 20px;
     text-align: left;
   }
 
