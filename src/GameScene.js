@@ -10,6 +10,7 @@ export default props => {
     resetAll,
   } = props;
 
+  // Function that hides undiscovered latters "behind" underscores
   const makeLettersArray = (secretWord, enteredLetters) =>
     secretWord.split('').map((letter, i) => {
       let spanContent;

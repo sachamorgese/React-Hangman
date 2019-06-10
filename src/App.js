@@ -53,7 +53,7 @@ function App() {
     }
   }, [newGame]);
 
-  // Side effect that happens when
+  // "Side effect" that happens when typing letters
   useEffect(() => {
     const allLetters =
       secretWord.length &&
@@ -69,6 +69,7 @@ function App() {
     }
   }, [enteredLetters, secretWord, countdown]);
 
+  // This side effect is called when player lives change
   useEffect(() => {
     if (lives <= 0) {
       setPlayerWon(false);
@@ -76,6 +77,7 @@ function App() {
     }
   }, [lives, countdown]);
 
+  // This side effect changes with time
   useEffect(() => {
     if (time === 0) {
       setLives(prevLives => prevLives - 1);
@@ -83,11 +85,13 @@ function App() {
     }
   }, [time]);
 
+  // Function called when starting a new game
   const handleNewGame = () => {
     setNewGame(false);
     setCountdown(setInterval(() => setTime(prev => prev - 1), 1000));
   };
 
+  // Function called to reset the game and start again
   const resetAll = () => {
     setNewGame(true);
     setSecretWord('');

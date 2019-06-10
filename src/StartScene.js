@@ -8,6 +8,7 @@ function StartScene(props) {
 
   const { setNewGame, setSecretWord } = props;
 
+  // Function that makes sure the secret word is made only of letters
   const handleInput = e => {
     const {
       target: { value },
@@ -31,6 +32,7 @@ function StartScene(props) {
     setError(false);
   };
 
+  // Makes sure the word is of the right length
   const handleSubmit = input => {
     const length = input.length;
 
@@ -42,6 +44,7 @@ function StartScene(props) {
     }
   };
 
+  // Calls the submit method if Enter is pressed
   const handleEnter = (e, input) => {
     if (e.key !== 'Enter') {
       return;
