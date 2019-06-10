@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<div>
+  <div
+    class="App"
+    data-testid="app-root"
+    tabindex="1"
+  >
+    <main
+      class="Main"
+    >
+      <span
+        class="Main__title"
+      >
+        Sacha's Hangman
+      </span>
+      <label
+        class="Main__text"
+        for="word-input"
+      >
+        Insert the word
+      </label>
+      <input
+        autocomplete="off"
+        class="Main__input"
+        id="word-input"
+        type="password"
+        value=""
+      />
+      <button
+        class="Main__button"
+        type="button"
+      >
+        Done
+      </button>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App when in game scene reacts correctly when entering characters 1`] = `
+<div>
+  <div
+    class="App"
+    data-testid="app-root"
+    tabindex="1"
+  >
+    <main
+      class="Main"
+    >
+      <span
+        class="Main__title"
+      >
+        Sacha's Hangman
+      </span>
+      <span
+        class="Main__lives"
+      >
+        Remaining lives: 
+        7
+      </span>
+      <span
+        class="Main__time"
+      >
+        Remaining time: 
+        30
+      </span>
+      <div
+        class="Main__letters"
+      >
+        <span>
+          g 
+        </span>
+        <span>
+          a 
+        </span>
+        <span>
+          m 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          e
+        </span>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App when in game scene renders correctly after submitting a word 1`] = `
+<div>
+  <div
+    class="App"
+    data-testid="app-root"
+    tabindex="1"
+  >
+    <main
+      class="Main"
+    >
+      <span
+        class="Main__title"
+      >
+        Sacha's Hangman
+      </span>
+      <span
+        class="Main__lives"
+      >
+        Remaining lives: 
+        7
+      </span>
+      <span
+        class="Main__time"
+      >
+        Remaining time: 
+        30
+      </span>
+      <div
+        class="Main__letters"
+      >
+        <span>
+          g 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          _ 
+        </span>
+        <span>
+          e
+        </span>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App when in game scene resets the game correctly 1`] = `
+<div>
+  <div
+    class="App"
+    data-testid="app-root"
+    tabindex="1"
+  >
+    <main
+      class="Main"
+    >
+      <span
+        class="Main__title"
+      >
+        Sacha's Hangman
+      </span>
+      <label
+        class="Main__text"
+        for="word-input"
+      >
+        Insert the word
+      </label>
+      <input
+        autocomplete="off"
+        class="Main__input"
+        id="word-input"
+        type="password"
+        value=""
+      />
+      <button
+        class="Main__button"
+        type="button"
+      >
+        Done
+      </button>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`App when in game scene resets the game correctly 2`] = `
+<div>
+  <div
+    class="App"
+    data-testid="app-root"
+    tabindex="1"
+  >
+    <main
+      class="Main"
+    >
+      <span
+        class="Main__title"
+      >
+        Sacha's Hangman
+      </span>
+      <label
+        class="Main__text"
+        for="word-input"
+      >
+        Insert the word
+      </label>
+      <input
+        autocomplete="off"
+        class="Main__input"
+        id="word-input"
+        type="password"
+        value=""
+      />
+      <button
+        class="Main__button"
+        type="button"
+      >
+        Done
+      </button>
+    </main>
+  </div>
+</div>
+`;

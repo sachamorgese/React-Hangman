@@ -10,20 +10,26 @@ export default props => {
     resetAll,
   } = props;
 
-  const showLetters = secretWord => {
-    const { length } = secretWord;
-    return secretWord.split('').map((letter, i) => {
-      if (i === 0 || i === length - 1 || Boolean(enteredLetters[letter])) {
-        return <span key={i}>{`${letter}${i !== length - 1 ? ' ' : ''}`}</span>;
+  const makeLettersArray = (secretWord, enteredLetters) =>
+    secretWord.split('').map((letter, i) => {
+      let spanContent;
+      if (
+        i === 0 ||
+        i === secretWord.length - 1 ||
+        Boolean(enteredLetters[letter])
+      ) {
+        spanContent = `${letter}${i !== secretWord.length - 1 ? ' ' : ''}`;
       } else {
-        return <span key={i}>_ </span>;
+        spanContent = '_ ';
       }
+      return <span key={i}>{spanContent}</span>;
     });
-  };
 
   const tryAgainSpan = resetAll => (
     <>
-      <span class="Main__text">{playerWon ? 'You Win!' : 'You died...'}</span>
+      <span className="Main__text">
+        {playerWon ? 'You Win!' : 'Game Over...'}
+      </span>
       <button className="Main__button" type="button" onClick={resetAll}>
         Try Again
       </button>
@@ -34,7 +40,9 @@ export default props => {
     <>
       <span className="Main__lives">Remaining lives: {lives}</span>
       <span className="Main__time">Remaining time: {time}</span>
-      <div className="Main__letters">{showLetters(secretWord)}</div>
+      <div className="Main__letters">
+        {makeLettersArray(secretWord, enteredLetters)}
+      </div>
       {playerWon !== null && tryAgainSpan(resetAll)}
     </>
   );

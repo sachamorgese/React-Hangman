@@ -19,11 +19,15 @@ function App() {
 
   const handleKeyInput = (e, playerWon, newGame, secretWord) => {
     const { keyCode, key } = e;
+
+    // Checks if it's a letter, otherwise returns;
     if (keyCode < 65 && keyCode > 90) {
       return;
     }
 
+    // Checks if the game is still ongoing
     if (playerWon === null && !newGame) {
+      // Sets the entered letter
       setEnteredLetters(prevState => {
         if (!prevState[key]) {
           return {
@@ -34,18 +38,22 @@ function App() {
         return prevState;
       });
 
+      // Check if the secret word includes the letter or reduces the player's lives by one
       if (!secretWord.includes(key)) {
         setLives(prevLives => prevLives - 1);
       }
     }
   };
 
+  // Side effect that happens when newGame changes
   useEffect(() => {
+    // Used to focus on the div so that the player doesn't have to click to enter
     if (!newGame) {
       appRef.current.focus();
     }
   }, [newGame]);
 
+  // Side effect that happens when
   useEffect(() => {
     const allLetters =
       secretWord.length &&
@@ -92,6 +100,7 @@ function App() {
   return (
     <div
       className="App"
+      data-testid="app-root"
       tabIndex={1}
       onKeyDown={e => handleKeyInput(e, playerWon, newGame, secretWord)}
       ref={appRef}

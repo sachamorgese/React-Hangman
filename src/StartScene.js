@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+export const onlyLettersRegex = /[a-z]/g;
+
 function StartScene(props) {
   const [word, setWord] = useState('');
   const [error, setError] = useState(false);
@@ -10,6 +12,12 @@ function StartScene(props) {
     const {
       target: { value },
     } = e;
+
+    if (!value) {
+      setWord('');
+      return;
+    }
+
     if (value.length > 15) {
       setError(true);
       return;
@@ -17,7 +25,7 @@ function StartScene(props) {
 
     const lowerCaseValue = value.toLowerCase();
 
-    const onlyLetters = lowerCaseValue.match(/[a-z]/g).join('');
+    const onlyLetters = lowerCaseValue.match(onlyLettersRegex).join('');
 
     setWord(onlyLetters);
     setError(false);
@@ -34,13 +42,25 @@ function StartScene(props) {
     }
   };
 
+  const handleEnter = (e, input) => {
+    if (e.key !== 'Enter') {
+      return;
+    }
+
+    handleSubmit(input);
+  };
+
   return (
     <>
-      <span className="Main__text">Insert the word</span>
+      <label htmlFor="word-input" className="Main__text">
+        Insert the word
+      </label>
       <input
+        id="word-input"
         type="password"
         className="Main__input"
         onChange={handleInput}
+        onKeyPress={e => handleEnter(e, word)}
         value={word}
         autoComplete="off"
       />
